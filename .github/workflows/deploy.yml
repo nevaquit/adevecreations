@@ -27,11 +27,8 @@ on:
                                                                                                                             run: npm run build
                                                                                                                                     working-directory: client
                                                                                                                                     
-                                                                                                                                          - name: Deploy via FTP
-                                                                                                                                                  uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-                                                                                                                                                          with:
-                                                                                                                                                                    server: ${{ secrets.FTP_HOST }}
-                                                                                                                                                                              username: ${{ secrets.FTP_USERNAME }}
-                                                                                                                                                                                        password: ${{ secrets.FTP_PASSWORD }}
-                                                                                                                                                                                                  local-dir: client/dist/
-                                                                                                                                                                                                            server-dir: /home2/xgmztfmy/adevecreations.com/
+                                                                                                                                          - name: Trigger cPanel Git pull and deploy
+                                                                                                                                                  run: |
+                                                                                                                                                            curl -s -o /dev/null -w "%{http_code}" \
+                                                                                                                                                                        -H "Authorization: cpanel xgmztfmy:${{ secrets.CPANEL_API_TOKEN }}" \
+                                                                                                                                                                                    "https://sh00251.bluehost.com:2083/execute/VersionControl/update?repository_root=%2Fhome2%2Fxgmztfmy%2Frepos%2Fadevecreations"
