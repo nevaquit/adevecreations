@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Experience", href: "#experience" },
   { label: "Compliance", href: "#compliance" },
+  { label: "Tax Certificates", href: "#tax-certificates" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -61,7 +62,7 @@ export default function Navbar() {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400" />
             </span>
             <span className="text-[10px] font-semibold text-emerald-400 uppercase tracking-wider hidden sm:inline">
-              Active Vendor
+              Supplies and Services
             </span>
           </span>
         </a>

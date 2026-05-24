@@ -1,11 +1,5 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <div>
-      <h1>ADEVE Creations</h1>
-      <p>Website coming soon.</p>
-    </div>
-  </StrictMode>,
-)
+createRoot(document.getElementById("root")!).render(<App />);

@@ -10,6 +10,7 @@ const footerLinks = {
   Services: [
     { label: "Procurement Categories", href: "#services" },
     { label: "Compliance", href: "#compliance" },
+    { label: "Tax Certificates", href: "#tax-certificates" },
     { label: "Capability Statement", href: "/capability-statement.pdf" },
   ],
   Resources: [
@@ -51,7 +52,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-white/40 text-sm leading-relaxed max-w-sm mb-5">
-              Local supplier and service partner preparing for U.S. Embassy Zimbabwe procurement opportunities with compliance-ready operations.
+              ADEVE Creations, owned by Rutendo Jenkins, provides supplies and services for embassy and institutional procurement with compliance-ready operations.
             </p>
 
             <div className="flex items-start gap-2 mb-2">
